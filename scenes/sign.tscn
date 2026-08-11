@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cprh0e3o5ohio"]
+
+[ext_resource type="Texture2D" uid="uid://kv1xv2g2y6s8" path="res://assets/environment/craftpix-net-314143-free-industrial-zone-tileset-pixel-art/3 Objects/Pointer1.png" id="1_shbub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr57u"]
+
+[node name="sign" type="StaticBody2D" unique_id=1060817497]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=79828906]
+texture = ExtResource("1_shbub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1220409185]
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_dr57u")
+disabled = true

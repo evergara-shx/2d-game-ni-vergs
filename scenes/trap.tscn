@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://um4qabwqybei"]
+
+[ext_resource type="Texture2D" uid="uid://dinu58geeg4sk" path="res://assets/environment/craftpix-net-924041-power-station-free-tileset-pixel-art/4 Animated objects/Trap.png" id="1_npg1n"]
+[ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://killzone.tscn" id="2_62q8x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62q8x"]
+atlas = ExtResource("1_npg1n")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aucmg"]
+atlas = ExtResource("1_npg1n")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk2q1"]
+atlas = ExtResource("1_npg1n")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sb0t"]
+atlas = ExtResource("1_npg1n")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62q8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aucmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk2q1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sb0t")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nmbx5"]
+radius = 3.0
+height = 10.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr57u"]
+size = Vector2(3.670887, 2.4050636)
+
+[node name="Trap" type="AnimatableBody2D" unique_id=257821033]
+scale = Vector2(0.79, 0.79)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1732627468]
+position = Vector2(0, -12)
+scale = Vector2(0.625, 0.5833333)
+sprite_frames = SubResource("SpriteFrames_dr57u")
+autoplay = "default"
+frame_progress = 0.97259253
+
+[node name="Killzone" parent="." unique_id=279041205 instance=ExtResource("2_62q8x")]
+position = Vector2(0, -16)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1867775344]
+shape = SubResource("CapsuleShape2D_nmbx5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=293865612]
+shape = SubResource("RectangleShape2D_dr57u")

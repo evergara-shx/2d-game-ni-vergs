@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bo1kkwuhu3old"]
+
+[ext_resource type="Script" uid="uid://bnqdi1q6rn1gc" path="res://script/moving_saw.gd" id="1_ns8uk"]
+[ext_resource type="Texture2D" uid="uid://d641od0xwvdv" path="res://assets/environment/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/4 Animated objects/Saw.png" id="1_qjopn"]
+[ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://killzone.tscn" id="2_ns8uk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqic3"]
+atlas = ExtResource("1_qjopn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30n6l"]
+atlas = ExtResource("1_qjopn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f877d"]
+atlas = ExtResource("1_qjopn")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqtn8"]
+atlas = ExtResource("1_qjopn")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy5lm"]
+atlas = ExtResource("1_qjopn")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hin5"]
+atlas = ExtResource("1_qjopn")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqic3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30n6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f877d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqtn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy5lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hin5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dr57u"]
+radius = 16.0
+
+[node name="MovingSaw" type="Node2D" unique_id=519960476]
+script = ExtResource("1_ns8uk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1893620729]
+sprite_frames = SubResource("SpriteFrames_dr57u")
+autoplay = "default"
+frame_progress = 0.055097904
+
+[node name="Killzone" parent="." unique_id=279041205 instance=ExtResource("2_ns8uk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1741365801]
+shape = SubResource("CircleShape2D_dr57u")
+
+[node name="RayCast_Right" type="RayCast2D" parent="." unique_id=722132932]
+target_position = Vector2(22, 0)
+
+[node name="RayCast_Left" type="RayCast2D" parent="." unique_id=952457405]
+target_position = Vector2(-22, 0)

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://7dmeeiy8un8"]
+
+[ext_resource type="Script" uid="uid://b2x5ixkgqpmru" path="res://script/cards.gd" id="1_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://322gko5avwdo" path="res://assets/environment/craftpix-net-846754-free-green-zone-tileset-pixel-art/4 Animated objects/Card.png" id="2_ktuci"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4261"]
+radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqter"]
+atlas = ExtResource("2_ktuci")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a8qm"]
+atlas = ExtResource("2_ktuci")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucp30"]
+atlas = ExtResource("2_ktuci")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7x4b"]
+atlas = ExtResource("2_ktuci")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvf2a"]
+atlas = ExtResource("2_ktuci")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt1ej"]
+atlas = ExtResource("2_ktuci")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5gna"]
+atlas = ExtResource("2_ktuci")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypx2k"]
+atlas = ExtResource("2_ktuci")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqter")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8a8qm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucp30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7x4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvf2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt1ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5gna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypx2k")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Card" type="Area2D" unique_id=485943190]
+collision_mask = 2
+script = ExtResource("1_6u4wf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=303916825]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_g4261")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=887797076]
+sprite_frames = SubResource("SpriteFrames_dr57u")
+autoplay = "default"
+frame_progress = 0.42904812
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

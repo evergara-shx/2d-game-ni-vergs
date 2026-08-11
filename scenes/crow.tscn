@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://cg8g0dle02n0d"]
+
+[ext_resource type="Script" uid="uid://dreolx1rqq6qp" path="res://script/crow.gd" id="1_7p4co"]
+[ext_resource type="Texture2D" uid="uid://disfkrvhrojfm" path="res://assets/character/craftpix-net-610575-free-street-animal-pixel-art-asset-pack/7 Bird/Walk.png" id="1_n3e2n"]
+[ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://killzone.tscn" id="2_7p4co"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay1ma"]
+atlas = ExtResource("1_n3e2n")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvota"]
+atlas = ExtResource("1_n3e2n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbwsl"]
+atlas = ExtResource("1_n3e2n")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhwtl"]
+atlas = ExtResource("1_n3e2n")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17ys8"]
+atlas = ExtResource("1_n3e2n")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18o0a"]
+atlas = ExtResource("1_n3e2n")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay1ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvota")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbwsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhwtl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17ys8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18o0a")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dr57u"]
+radius = 7.071068
+
+[node name="crow" type="Node2D" unique_id=897940058]
+script = ExtResource("1_7p4co")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=477981255]
+position = Vector2(0, -5)
+sprite_frames = SubResource("SpriteFrames_dr57u")
+autoplay = "default"
+frame_progress = 0.61682004
+
+[node name="Killzone" parent="." unique_id=279041205 instance=ExtResource("2_7p4co")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1364577812]
+shape = SubResource("CircleShape2D_dr57u")
+
+[node name="RayCast_Right" type="RayCast2D" parent="." unique_id=792946232]
+target_position = Vector2(15, 0)
+
+[node name="RayCast_Left" type="RayCast2D" parent="." unique_id=1418275944]
+target_position = Vector2(-14, 0)

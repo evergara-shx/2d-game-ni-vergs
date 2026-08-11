@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bb4t1y07gsaa1"]
+
+[ext_resource type="Script" uid="uid://1cpwl3ck5p8p" path="res://script/claimable.gd" id="1_vl6ib"]
+[ext_resource type="Texture2D" uid="uid://dxics5vu3c0jn" path="res://assets/environment/craftpix-net-846754-free-green-zone-tileset-pixel-art/3 Objects/Fence/1.png" id="2_nvnem"]
+[ext_resource type="Texture2D" uid="uid://c23jxa3a84ruf" path="res://assets/environment/craftpix-net-846754-free-green-zone-tileset-pixel-art/3 Objects/Fence/2.png" id="3_j3jes"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0m42x"]
+size = Vector2(30, 62)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nvnem")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_j3jes")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 5.0
+}]
+
+[node name="Claimable" type="Node2D" unique_id=1218090172]
+script = ExtResource("1_vl6ib")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=273998987]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2041147692]
+shape = SubResource("RectangleShape2D_0m42x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=83508624]
+sprite_frames = SubResource("SpriteFrames_dr57u")
+animation = &"open"
