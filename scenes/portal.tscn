@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bpn6bed6k0vj6"]
+
+[ext_resource type="Script" uid="uid://dw4d8nlpwqqn2" path="res://script/portal.gd" id="1_ef3v5"]
+[ext_resource type="Texture2D" uid="uid://b4gkhj2hn4m10" path="res://assets/environment/tunnel.png" id="2_grrij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr57u"]
+size = Vector2(61.96132, 63)
+
+[node name="Portal" type="Area2D" unique_id=361948994]
+scale = Vector2(0.59187174, 0.59187174)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_ef3v5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1569535737]
+position = Vector2(39.98066, -34.5)
+shape = SubResource("RectangleShape2D_dr57u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=179133257]
+position = Vector2(40.000004, -33.999996)
+rotation = -1.5707964
+scale = Vector2(0.10726665, 0.107266665)
+texture = ExtResource("2_grrij")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

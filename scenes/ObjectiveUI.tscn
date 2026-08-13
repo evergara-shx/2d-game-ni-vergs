@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b36alrfh22yga"]
+
+[ext_resource type="Script" uid="uid://5ugvlaefa1cp" path="res://script/ObjectiveUI.gd" id="1_5lp0o"]
+[ext_resource type="FontFile" uid="uid://b7dvgd37cq5p8" path="res://assets/fonts/VT323-Regular.ttf" id="2_6eyo8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sr3nt"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 5
+
+[node name="ObjectiveUI" type="CanvasLayer" unique_id=1602419165]
+script = ExtResource("1_5lp0o")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1528764801]
+offset_right = 300.0
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=1102940853]
+custom_minimum_size = Vector2(300, 90)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sr3nt")
+
+[node name="objective" type="Label" parent="CenterContainer/Panel" unique_id=1338213593]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_6eyo8")
+theme_override_font_sizes/font_size = 25
+text = "ASDASADASAD"
+
+[node name="Objective_description" type="Label" parent="CenterContainer/Panel" unique_id=84762934]
+layout_mode = 0
+offset_top = 31.0
+offset_right = 40.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("2_6eyo8")
+theme_override_font_sizes/font_size = 20
+text = "SADASADSASAD"

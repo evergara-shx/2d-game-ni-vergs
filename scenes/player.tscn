@@ -50,6 +50,10 @@ region = Rect2(144, 0, 48, 48)
 atlas = ExtResource("3_qhqgy")
 region = Rect2(0, 0, 48, 48)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(96, 0, 48, 48)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
 atlas = ExtResource("3_qhqgy")
 region = Rect2(0, 0, 48, 48)
@@ -119,8 +123,11 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r5pv")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"jump",
 "speed": 5.0
 }, {
@@ -151,16 +158,16 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_qnb83"]
 radius = 8.062258
 
-[node name="Player" type="CharacterBody2D" unique_id=1484756979]
+[node name="Player" type="CharacterBody2D" unique_id=1484756979 groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1839928197]
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_dr57u")
-animation = &"death"
+animation = &"jump"
 autoplay = "default"
-frame = 5
+frame = 1
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1718714116]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bnqdi1q6rn1gc" path="res://script/moving_saw.gd" id="1_ns8uk"]
 [ext_resource type="Texture2D" uid="uid://d641od0xwvdv" path="res://assets/environment/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/4 Animated objects/Saw.png" id="1_qjopn"]
-[ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://killzone.tscn" id="2_ns8uk"]
+[ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://scenes/killzone.tscn" id="2_ns8uk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nqic3"]
 atlas = ExtResource("1_qjopn")

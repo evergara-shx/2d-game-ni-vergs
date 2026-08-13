@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cca478v5fnm1j"]
+
+[ext_resource type="Script" uid="uid://dhssbolm7exs2" path="res://script/grayrat.gd" id="1_pqnw7"]
+[ext_resource type="Texture2D" uid="uid://cyqlquk7us78l" path="res://assets/character/craftpix-net-610575-free-street-animal-pixel-art-asset-pack/6 Rat 2/Walk.png" id="1_wp2c3"]
+[ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://scenes/killzone.tscn" id="2_pqnw7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7poqb"]
+atlas = ExtResource("1_wp2c3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxhxa"]
+atlas = ExtResource("1_wp2c3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvb6q"]
+atlas = ExtResource("1_wp2c3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxyje"]
+atlas = ExtResource("1_wp2c3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i7x03"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7poqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxhxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvb6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxyje")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7x03"]
+size = Vector2(23, 10.5)
+
+[node name="Rat" type="Node2D" unique_id=1756262056]
+script = ExtResource("1_pqnw7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=334632715]
+position = Vector2(11, -26)
+scale = Vector2(1.625, 1.625)
+sprite_frames = SubResource("SpriteFrames_i7x03")
+autoplay = "default"
+frame_progress = 0.7309641
+
+[node name="Killzone" parent="." unique_id=279041205 instance=ExtResource("2_pqnw7")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1462330309]
+position = Vector2(9, -5)
+shape = SubResource("RectangleShape2D_i7x03")
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1731591600]
+target_position = Vector2(28, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1233548370]
+target_position = Vector2(-13, 0)

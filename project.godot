@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="cool 2d game am i right??? (Copy)"
+config/name="cool2dgame"
 run/main_scene="uid://d3tvppotfl0wx"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"

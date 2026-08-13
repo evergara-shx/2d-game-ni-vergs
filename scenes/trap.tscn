@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://um4qabwqybei"]
 
 [ext_resource type="Texture2D" uid="uid://dinu58geeg4sk" path="res://assets/environment/craftpix-net-924041-power-station-free-tileset-pixel-art/4 Animated objects/Trap.png" id="1_npg1n"]
-[ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://killzone.tscn" id="2_62q8x"]
+[ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://scenes/killzone.tscn" id="2_62q8x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_62q8x"]
 atlas = ExtResource("1_npg1n")

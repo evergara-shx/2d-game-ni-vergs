@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://vjgtw02bynk1"]
+
+[ext_resource type="Texture2D" uid="uid://belcxts423nc3" path="res://assets/environment/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/4 Animated objects/Gas_sycle.png" id="1_77a1s"]
+[ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://scenes/killzone.tscn" id="2_acf8p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm45x"]
+atlas = ExtResource("1_77a1s")
+region = Rect2(0, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gohih"]
+atlas = ExtResource("1_77a1s")
+region = Rect2(72, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0un20"]
+atlas = ExtResource("1_77a1s")
+region = Rect2(144, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jbjy"]
+atlas = ExtResource("1_77a1s")
+region = Rect2(216, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xypa"]
+atlas = ExtResource("1_77a1s")
+region = Rect2(288, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kk8k"]
+atlas = ExtResource("1_77a1s")
+region = Rect2(360, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdl3e"]
+atlas = ExtResource("1_77a1s")
+region = Rect2(432, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jns0"]
+atlas = ExtResource("1_77a1s")
+region = Rect2(504, 0, 72, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cm45x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gohih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0un20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jbjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xypa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kk8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdl3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jns0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b4j7a"]
+radius = 6.0
+
+[node name="Gas" type="Node2D" unique_id=2005369269]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1271389947]
+position = Vector2(0, 4)
+scale = Vector2(0.25000003, 0.25694445)
+sprite_frames = SubResource("SpriteFrames_dr57u")
+autoplay = "default"
+frame_progress = 0.13629179
+flip_h = true
+
+[node name="Killzone" parent="." unique_id=279041205 instance=ExtResource("2_acf8p")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=692006211]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_b4j7a")
