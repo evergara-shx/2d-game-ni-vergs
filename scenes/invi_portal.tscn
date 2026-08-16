@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://uujn5pbr668x"]
+
+[ext_resource type="Script" uid="uid://b4wp877v134n1" path="res://script/invi_portal.gd" id="1_33icy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr57u"]
+size = Vector2(24, 49)
+
+[node name="invi_portal" type="Area2D" unique_id=689543858]
+script = ExtResource("1_33icy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=340210182]
+position = Vector2(2, 14.5)
+shape = SubResource("RectangleShape2D_dr57u")

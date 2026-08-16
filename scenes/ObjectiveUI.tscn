@@ -28,17 +28,19 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_sr3nt")
 
 [node name="objective" type="Label" parent="CenterContainer/Panel" unique_id=1338213593]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 3.0
+offset_right = 113.0
+offset_bottom = 25.0
 theme_override_fonts/font = ExtResource("2_6eyo8")
 theme_override_font_sizes/font_size = 25
 text = "ASDASADASAD"
 
 [node name="Objective_description" type="Label" parent="CenterContainer/Panel" unique_id=84762934]
 layout_mode = 0
-offset_top = 31.0
-offset_right = 40.0
-offset_bottom = 54.0
+offset_left = 114.0
+offset_top = 4.0
+offset_right = 210.0
+offset_bottom = 27.0
 theme_override_fonts/font = ExtResource("2_6eyo8")
 theme_override_font_sizes/font_size = 20
 text = "SADASADSASAD"

@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://qqagceounl6i" path="res://script/level_intro.gd" id="1_6f35c"]
 [ext_resource type="FontFile" uid="uid://b7dvgd37cq5p8" path="res://assets/fonts/VT323-Regular.ttf" id="2_7dprr"]
-[ext_resource type="Texture2D" uid="uid://eqhaehe3y0bn" path="res://assets/UI/craftpix-net-618358-cyber-intrusion-free-gui-pixel-art-pack/1 Monitor/3.png" id="2_lg3y3"]
+[ext_resource type="Texture2D" uid="uid://c4qfsocqwh24r" path="res://assets/environment/shit.-removebg-preview.png" id="2_st5du"]
+[ext_resource type="Texture2D" uid="uid://dafad3jsbuo7w" path="res://assets/environment/2-removebg-preview.png" id="4_st5du"]
+[ext_resource type="Texture2D" uid="uid://dajixno8ge0nj" path="res://assets/environment/shit.__1_-removebg-preview.png" id="5_ltek1"]
 
 [node name="LevelIntro" type="CanvasLayer" unique_id=474043635]
 script = ExtResource("1_6f35c")
@@ -11,27 +13,110 @@ script = ExtResource("1_6f35c")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 150.0
+offset_right = -2.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, -190)
+offset_transform_scale = Vector2(0.725, 0.725)
 
 [node name="Panel" type="TextureRect" parent="CenterContainer" unique_id=981505076]
 custom_minimum_size = Vector2(400, 170)
 layout_mode = 2
-texture = ExtResource("2_lg3y3")
+texture = ExtResource("2_st5du")
 
 [node name="LevelName" type="Label" parent="CenterContainer/Panel" unique_id=727819090]
 layout_mode = 0
-offset_left = -40.0
-offset_top = 59.0
-offset_right = 460.0
-offset_bottom = 109.0
+offset_left = 88.0
+offset_top = 252.0
+offset_right = 588.0
+offset_bottom = 302.0
 theme_override_fonts/font = ExtResource("2_7dprr")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 
 [node name="Description" type="Label" parent="CenterContainer/Panel" unique_id=546933667]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 121.0
+offset_right = 456.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("2_7dprr")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=994071287]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 150.0
+offset_right = -2.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -190)
+offset_transform_scale = Vector2(0.725, 0.725)
+
+[node name="Panel" type="TextureRect" parent="CenterContainer2" unique_id=1664711656]
+custom_minimum_size = Vector2(400, 170)
+layout_mode = 2
+texture = ExtResource("4_st5du")
+
+[node name="LevelName" type="Label" parent="CenterContainer2/Panel" unique_id=1799621334]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 252.0
+offset_right = 588.0
+offset_bottom = 302.0
+theme_override_fonts/font = ExtResource("2_7dprr")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="CenterContainer2/Panel" unique_id=2021802651]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 121.0
+offset_right = 456.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("2_7dprr")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="CenterContainer3" type="CenterContainer" parent="." unique_id=1091325409]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 150.0
+offset_right = -2.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -190)
+offset_transform_scale = Vector2(0.725, 0.725)
+
+[node name="Panel" type="TextureRect" parent="CenterContainer3" unique_id=2050421321]
+custom_minimum_size = Vector2(400, 170)
+layout_mode = 2
+texture = ExtResource("5_ltek1")
+
+[node name="LevelName" type="Label" parent="CenterContainer3/Panel" unique_id=1028124487]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 252.0
+offset_right = 588.0
+offset_bottom = 302.0
+theme_override_fonts/font = ExtResource("2_7dprr")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="CenterContainer3/Panel" unique_id=1236448775]
 layout_mode = 0
 offset_left = -44.0
 offset_top = 121.0

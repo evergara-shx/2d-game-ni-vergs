@@ -3,12 +3,22 @@
 [ext_resource type="Script" uid="uid://damleyvsulwhw" path="res://script/next_level.gd" id="1_8rh8h"]
 [ext_resource type="Texture2D" uid="uid://bg4e453h0djr7" path="res://assets/environment/sewerbg.png" id="1_jymac"]
 [ext_resource type="PackedScene" uid="uid://d27mew3ys1ssl" path="res://scenes/player.tscn" id="2_nlao2"]
+[ext_resource type="Texture2D" uid="uid://djqe6o3xx1sme" path="res://assets/environment/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/3 Objects/Barrel/3.png" id="3_7k2y4"]
 [ext_resource type="PackedScene" uid="uid://d4nbyb3ief8oo" path="res://scenes/killzone.tscn" id="3_o3ii7"]
+[ext_resource type="Texture2D" uid="uid://kv1xv2g2y6s8" path="res://assets/environment/craftpix-net-314143-free-industrial-zone-tileset-pixel-art/3 Objects/Pointer1.png" id="3_twfgh"]
+[ext_resource type="Texture2D" uid="uid://dypenfklg2p3w" path="res://assets/environment/craftpix-net-924041-power-station-free-tileset-pixel-art/3 Objects/1 Tube/8.png" id="3_vfmvc"]
 [ext_resource type="PackedScene" uid="uid://cca478v5fnm1j" path="res://scenes/grayrat.tscn" id="4_8rh8h"]
+[ext_resource type="Texture2D" uid="uid://cfe6fnkjdkvt3" path="res://assets/environment/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/3 Objects/Barrel/2.png" id="4_dt8cn"]
+[ext_resource type="Texture2D" uid="uid://dt3j5fv5r6ppk" path="res://assets/environment/craftpix-net-144661-free-halloween-character-pixel-art-pack/2 Objects/Vine1.png" id="4_fglwi"]
 [ext_resource type="PackedScene" uid="uid://vjgtw02bynk1" path="res://scenes/gas.tscn" id="5_twfgh"]
+[ext_resource type="Texture2D" uid="uid://okdpvehw432g" path="res://assets/environment/craftpix-net-144661-free-halloween-character-pixel-art-pack/2 Objects/Vine3.png" id="5_vfmvc"]
 [ext_resource type="PackedScene" uid="uid://bpn6bed6k0vj6" path="res://scenes/portal.tscn" id="6_bau2p"]
+[ext_resource type="Texture2D" uid="uid://b0x41qxfego1t" path="res://assets/environment/craftpix-net-144661-free-halloween-character-pixel-art-pack/2 Objects/Vine2.png" id="6_u6xpa"]
 [ext_resource type="PackedScene" uid="uid://bmp5t8koicuu2" path="res://scenes/level_intro.tscn" id="7_nlao2"]
+[ext_resource type="Texture2D" uid="uid://dpafdrql1f00t" path="res://assets/environment/craftpix-net-144661-free-halloween-character-pixel-art-pack/2 Objects/Vine4.png" id="7_q7irw"]
 [ext_resource type="PackedScene" uid="uid://b36alrfh22yga" path="res://scenes/ObjectiveUI.tscn" id="8_o3ii7"]
+[ext_resource type="Texture2D" uid="uid://c7is0tfppdcs0" path="res://assets/environment/craftpix-net-924041-power-station-free-tileset-pixel-art/3 Objects/1 Tube/9.png" id="16_u6xpa"]
+[ext_resource type="Texture2D" uid="uid://dcsmcunmn7y1w" path="res://assets/environment/craftpix-net-314143-free-industrial-zone-tileset-pixel-art/3 Objects/Bench.png" id="19_dt8cn"]
 
 [sub_resource type="Gradient" id="Gradient_jymac"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -22,6 +32,12 @@ fill_to = Vector2(1, 0.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4261"]
 size = Vector2(311.625, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur0nc"]
+size = Vector2(21.90625, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv3hk"]
+size = Vector2(43.953125, 9)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ivcd"]
 size = Vector2(20, 106)
 
@@ -30,6 +46,24 @@ size = Vector2(259, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgchx"]
 size = Vector2(87.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbpsy"]
+size = Vector2(290.75, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6n6w2"]
+size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k2y4"]
+size = Vector2(18, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt8cn"]
+size = Vector2(15, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_firab"]
+size = Vector2(21, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bjin"]
+size = Vector2(21, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4mkm"]
 size = Vector2(295, 20)
@@ -40,11 +74,17 @@ size = Vector2(2, 13)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b4j7a"]
 size = Vector2(2, 9)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr57u"]
-size = Vector2(94, 20)
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr57u"]
 distance = -36.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgl2t"]
+size = Vector2(256, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hivmq"]
+size = Vector2(85.5, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm3l7"]
+size = Vector2(84, 10)
 
 [node name="next_level" type="Node2D" unique_id=1256064717]
 script = ExtResource("1_8rh8h")
@@ -83,18 +123,102 @@ texture = ExtResource("1_jymac")
 region_enabled = true
 region_rect = Rect2(0, 0, 2172, 58)
 
+[node name="vines" type="Node2D" parent="." unique_id=1816458354]
+
+[node name="barrel" type="Sprite2D" parent="vines" unique_id=946144921]
+position = Vector2(1157, 118)
+texture = ExtResource("3_7k2y4")
+
+[node name="barrel2" type="Sprite2D" parent="vines" unique_id=1217245711]
+position = Vector2(1237, 116)
+texture = ExtResource("4_dt8cn")
+
+[node name="barrel3" type="Sprite2D" parent="vines" unique_id=1755537034]
+position = Vector2(1343.9999, 122)
+scale = Vector2(0.7916667, 0.7916667)
+texture = ExtResource("3_7k2y4")
+
+[node name="Sprite2D" type="Sprite2D" parent="vines" unique_id=366967877]
+position = Vector2(977, 116)
+texture = ExtResource("3_twfgh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="vines" unique_id=2074993416]
+position = Vector2(1137, 125.75)
+texture = ExtResource("4_fglwi")
+
+[node name="Sprite2D4" type="Sprite2D" parent="vines" unique_id=1086981922]
+position = Vector2(1214, 124.75)
+scale = Vector2(0.9519235, 0.9519235)
+texture = ExtResource("5_vfmvc")
+
+[node name="Sprite2D5" type="Sprite2D" parent="vines" unique_id=1298619061]
+position = Vector2(1189, 127.75)
+scale = Vector2(0.65384614, 0.65384614)
+texture = ExtResource("4_fglwi")
+
+[node name="Sprite2D13" type="Sprite2D" parent="vines" unique_id=274899392]
+position = Vector2(55.81731, 127.99999)
+scale = Vector2(0.65384614, 0.65384614)
+texture = ExtResource("4_fglwi")
+
+[node name="Sprite2D3" type="Sprite2D" parent="vines" unique_id=1941912902]
+position = Vector2(1170, 124.75)
+scale = Vector2(0.65384614, 0.65384614)
+texture = ExtResource("6_u6xpa")
+
+[node name="Sprite2D7" type="Sprite2D" parent="vines" unique_id=281239219]
+position = Vector2(1261, 123)
+scale = Vector2(0.8269234, 0.8269234)
+texture = ExtResource("6_u6xpa")
+
+[node name="Sprite2D11" type="Sprite2D" parent="vines" unique_id=1189600598]
+position = Vector2(32.274048, 127.43751)
+scale = Vector2(0.49519283, 0.49519274)
+texture = ExtResource("6_u6xpa")
+
+[node name="Sprite2D8" type="Sprite2D" parent="vines" unique_id=738808272]
+position = Vector2(1281.0001, 125)
+scale = Vector2(0.8269234, 0.8269234)
+texture = ExtResource("5_vfmvc")
+
+[node name="Sprite2D12" type="Sprite2D" parent="vines" unique_id=837581648]
+position = Vector2(10.908655, 125.8077)
+scale = Vector2(0.76830035, 0.60096216)
+texture = ExtResource("5_vfmvc")
+
+[node name="Sprite2D9" type="Sprite2D" parent="vines" unique_id=1083783010]
+position = Vector2(1315, 126)
+scale = Vector2(1.0563195, 1.0563195)
+texture = ExtResource("4_fglwi")
+
+[node name="Sprite2D10" type="Sprite2D" parent="vines" unique_id=945282687]
+position = Vector2(1349, 124.99999)
+scale = Vector2(1.0563195, 1.0563195)
+texture = ExtResource("7_q7irw")
+
+[node name="Sprite2D14" type="Sprite2D" parent="vines" unique_id=589731194]
+position = Vector2(73.9386, 127.140785)
+scale = Vector2(0.8281597, 0.82815975)
+texture = ExtResource("7_q7irw")
+
+[node name="Sprite2D6" type="Sprite2D" parent="vines" unique_id=123045738]
+position = Vector2(1236, 127.750015)
+scale = Vector2(0.8269234, 0.8269234)
+texture = ExtResource("7_q7irw")
+
 [node name="Player" parent="." unique_id=1484756979 instance=ExtResource("2_nlao2")]
 position = Vector2(-334, 25)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=456191309]
+position = Vector2(-3, -16)
 zoom = Vector2(3, 3)
 limit_bottom = 241
 position_smoothing_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=48336691]
-position = Vector2(0, -8)
+position = Vector2(-10, -14)
 color = Color(0.46195698, 0.6314363, 0.73486793, 1)
-energy = 0.8
+energy = 1.12
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_bau2p")
 texture_scale = 3.0
@@ -105,6 +229,14 @@ position = Vector2(96, -10)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform" unique_id=1853789093]
 position = Vector2(-314.8125, 150)
 shape = SubResource("RectangleShape2D_g4261")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="platform" unique_id=1719172265]
+position = Vector2(-125, 108.5)
+shape = SubResource("RectangleShape2D_ur0nc")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="platform" unique_id=730382014]
+position = Vector2(-47.976563, 93)
+shape = SubResource("RectangleShape2D_bv3hk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="platform" unique_id=1970181294]
 position = Vector2(-461, 87)
@@ -118,6 +250,38 @@ shape = SubResource("RectangleShape2D_wh7lk")
 position = Vector2(412.25, 150)
 shape = SubResource("RectangleShape2D_fgchx")
 
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="platform" unique_id=1496006871]
+position = Vector2(909, 150)
+shape = SubResource("RectangleShape2D_fgchx")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="platform" unique_id=2061595341]
+position = Vector2(1627.625, 150)
+shape = SubResource("RectangleShape2D_jbpsy")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="platform" unique_id=162114194]
+position = Vector2(1062, 120)
+shape = SubResource("RectangleShape2D_6n6w2")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="platform" unique_id=2140167383]
+position = Vector2(1141, 119)
+shape = SubResource("RectangleShape2D_7k2y4")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="platform" unique_id=2003020962]
+position = Vector2(1249, 124)
+shape = SubResource("RectangleShape2D_dt8cn")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="platform" unique_id=347377657]
+position = Vector2(1339, 92)
+shape = SubResource("RectangleShape2D_firab")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="platform" unique_id=2087057674]
+position = Vector2(1384, 110)
+shape = SubResource("RectangleShape2D_8bjin")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="platform" unique_id=557195592]
+position = Vector2(1437, 89)
+shape = SubResource("RectangleShape2D_8bjin")
+
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="platform" unique_id=386696927]
 position = Vector2(659.5, 150)
 shape = SubResource("RectangleShape2D_p4mkm")
@@ -130,15 +294,23 @@ shape = SubResource("RectangleShape2D_eqxsl")
 position = Vector2(310, 144.5)
 shape = SubResource("RectangleShape2D_b4j7a")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="platform" unique_id=1809511472]
-position = Vector2(-54, 150)
-shape = SubResource("RectangleShape2D_dr57u")
-
 [node name="Killzone" parent="." unique_id=279041205 instance=ExtResource("3_o3ii7")]
 position = Vector2(-345, 174)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1603592967]
 shape = SubResource("WorldBoundaryShape2D_dr57u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone" unique_id=1729134567]
+position = Vector2(1589, -45)
+shape = SubResource("RectangleShape2D_sgl2t")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Killzone" unique_id=30662404]
+position = Vector2(1824, -45)
+shape = SubResource("RectangleShape2D_hivmq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Killzone" unique_id=370147981]
+position = Vector2(387, -42)
+shape = SubResource("RectangleShape2D_cm3l7")
 
 [node name="Rat" parent="." unique_id=1756262056 instance=ExtResource("4_8rh8h")]
 position = Vector2(191, 134)
@@ -156,9 +328,34 @@ rotation = 1.5707964
 next_level = "uid://dew8sadgh1i4f"
 
 [node name="LevelIntro" parent="." unique_id=474043635 instance=ExtResource("7_nlao2")]
-level_title = "Sewer System"
-level_description = "This place... stinks
-"
+level_title = "sewerage"
+design_name = "CenterContainer2"
 
 [node name="ObjectiveUI" parent="." unique_id=1602419165 instance=ExtResource("8_o3ii7")]
-Objective = "alsndlasdklasjnd"
+
+[node name="Platform2" type="Node2D" parent="." unique_id=1979398400]
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform2" unique_id=960405456]
+position = Vector2(-29, 99)
+rotation = -3.1415925
+texture = ExtResource("3_vfmvc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Platform2" unique_id=1051492186]
+position = Vector2(48, 82)
+rotation = -3.1415925
+texture = ExtResource("16_u6xpa")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Platform2" unique_id=355788206]
+position = Vector2(1435, 75)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("19_dt8cn")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Platform2" unique_id=1365955552]
+position = Vector2(1480.0001, 93.00001)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("19_dt8cn")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Platform2" unique_id=1977508935]
+position = Vector2(1533, 72.00001)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("19_dt8cn")
