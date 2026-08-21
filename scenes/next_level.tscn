@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bmp5t8koicuu2" path="res://scenes/level_intro.tscn" id="7_nlao2"]
 [ext_resource type="Texture2D" uid="uid://dpafdrql1f00t" path="res://assets/environment/craftpix-net-144661-free-halloween-character-pixel-art-pack/2 Objects/Vine4.png" id="7_q7irw"]
 [ext_resource type="PackedScene" uid="uid://b36alrfh22yga" path="res://scenes/ObjectiveUI.tscn" id="8_o3ii7"]
+[ext_resource type="Texture2D" uid="uid://cnvya82i6ot2w" path="res://assets/environment/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/3 Objects/Icons/11.png" id="10_6n6w2"]
 [ext_resource type="Texture2D" uid="uid://c7is0tfppdcs0" path="res://assets/environment/craftpix-net-924041-power-station-free-tileset-pixel-art/3 Objects/1 Tube/9.png" id="16_u6xpa"]
 [ext_resource type="Texture2D" uid="uid://dcsmcunmn7y1w" path="res://assets/environment/craftpix-net-314143-free-industrial-zone-tileset-pixel-art/3 Objects/Bench.png" id="19_dt8cn"]
 
@@ -123,88 +124,93 @@ texture = ExtResource("1_jymac")
 region_enabled = true
 region_rect = Rect2(0, 0, 2172, 58)
 
-[node name="vines" type="Node2D" parent="." unique_id=1816458354]
+[node name="design" type="Node2D" parent="." unique_id=1816458354]
 
-[node name="barrel" type="Sprite2D" parent="vines" unique_id=946144921]
+[node name="barrel" type="Sprite2D" parent="design" unique_id=946144921]
 position = Vector2(1157, 118)
 texture = ExtResource("3_7k2y4")
 
-[node name="barrel2" type="Sprite2D" parent="vines" unique_id=1217245711]
+[node name="barrel2" type="Sprite2D" parent="design" unique_id=1217245711]
 position = Vector2(1237, 116)
 texture = ExtResource("4_dt8cn")
 
-[node name="barrel3" type="Sprite2D" parent="vines" unique_id=1755537034]
+[node name="barrel3" type="Sprite2D" parent="design" unique_id=1755537034]
 position = Vector2(1343.9999, 122)
 scale = Vector2(0.7916667, 0.7916667)
 texture = ExtResource("3_7k2y4")
 
-[node name="Sprite2D" type="Sprite2D" parent="vines" unique_id=366967877]
+[node name="Sprite2D" type="Sprite2D" parent="design" unique_id=366967877]
 position = Vector2(977, 116)
 texture = ExtResource("3_twfgh")
 
-[node name="Sprite2D2" type="Sprite2D" parent="vines" unique_id=2074993416]
+[node name="Sprite2D2" type="Sprite2D" parent="design" unique_id=2074993416]
 position = Vector2(1137, 125.75)
 texture = ExtResource("4_fglwi")
 
-[node name="Sprite2D4" type="Sprite2D" parent="vines" unique_id=1086981922]
+[node name="Sprite2D4" type="Sprite2D" parent="design" unique_id=1086981922]
 position = Vector2(1214, 124.75)
 scale = Vector2(0.9519235, 0.9519235)
 texture = ExtResource("5_vfmvc")
 
-[node name="Sprite2D5" type="Sprite2D" parent="vines" unique_id=1298619061]
+[node name="Sprite2D5" type="Sprite2D" parent="design" unique_id=1298619061]
 position = Vector2(1189, 127.75)
 scale = Vector2(0.65384614, 0.65384614)
 texture = ExtResource("4_fglwi")
 
-[node name="Sprite2D13" type="Sprite2D" parent="vines" unique_id=274899392]
+[node name="Sprite2D13" type="Sprite2D" parent="design" unique_id=274899392]
 position = Vector2(55.81731, 127.99999)
 scale = Vector2(0.65384614, 0.65384614)
 texture = ExtResource("4_fglwi")
 
-[node name="Sprite2D3" type="Sprite2D" parent="vines" unique_id=1941912902]
+[node name="Sprite2D3" type="Sprite2D" parent="design" unique_id=1941912902]
 position = Vector2(1170, 124.75)
 scale = Vector2(0.65384614, 0.65384614)
 texture = ExtResource("6_u6xpa")
 
-[node name="Sprite2D7" type="Sprite2D" parent="vines" unique_id=281239219]
+[node name="Sprite2D7" type="Sprite2D" parent="design" unique_id=281239219]
 position = Vector2(1261, 123)
 scale = Vector2(0.8269234, 0.8269234)
 texture = ExtResource("6_u6xpa")
 
-[node name="Sprite2D11" type="Sprite2D" parent="vines" unique_id=1189600598]
+[node name="Sprite2D11" type="Sprite2D" parent="design" unique_id=1189600598]
 position = Vector2(32.274048, 127.43751)
 scale = Vector2(0.49519283, 0.49519274)
 texture = ExtResource("6_u6xpa")
 
-[node name="Sprite2D8" type="Sprite2D" parent="vines" unique_id=738808272]
+[node name="Sprite2D8" type="Sprite2D" parent="design" unique_id=738808272]
 position = Vector2(1281.0001, 125)
 scale = Vector2(0.8269234, 0.8269234)
 texture = ExtResource("5_vfmvc")
 
-[node name="Sprite2D12" type="Sprite2D" parent="vines" unique_id=837581648]
+[node name="Sprite2D12" type="Sprite2D" parent="design" unique_id=837581648]
 position = Vector2(10.908655, 125.8077)
 scale = Vector2(0.76830035, 0.60096216)
 texture = ExtResource("5_vfmvc")
 
-[node name="Sprite2D9" type="Sprite2D" parent="vines" unique_id=1083783010]
+[node name="Sprite2D9" type="Sprite2D" parent="design" unique_id=1083783010]
 position = Vector2(1315, 126)
 scale = Vector2(1.0563195, 1.0563195)
 texture = ExtResource("4_fglwi")
 
-[node name="Sprite2D10" type="Sprite2D" parent="vines" unique_id=945282687]
+[node name="Sprite2D10" type="Sprite2D" parent="design" unique_id=945282687]
 position = Vector2(1349, 124.99999)
 scale = Vector2(1.0563195, 1.0563195)
 texture = ExtResource("7_q7irw")
 
-[node name="Sprite2D14" type="Sprite2D" parent="vines" unique_id=589731194]
+[node name="Sprite2D14" type="Sprite2D" parent="design" unique_id=589731194]
 position = Vector2(73.9386, 127.140785)
 scale = Vector2(0.8281597, 0.82815975)
 texture = ExtResource("7_q7irw")
 
-[node name="Sprite2D6" type="Sprite2D" parent="vines" unique_id=123045738]
+[node name="Sprite2D6" type="Sprite2D" parent="design" unique_id=123045738]
 position = Vector2(1236, 127.750015)
 scale = Vector2(0.8269234, 0.8269234)
 texture = ExtResource("7_q7irw")
+
+[node name="Sprite2D15" type="Sprite2D" parent="design" unique_id=48286952]
+position = Vector2(1158, 77)
+scale = Vector2(0.5625, 0.5625)
+texture = ExtResource("10_6n6w2")
 
 [node name="Player" parent="." unique_id=1484756979 instance=ExtResource("2_nlao2")]
 position = Vector2(-334, 25)
@@ -259,7 +265,7 @@ position = Vector2(1627.625, 150)
 shape = SubResource("RectangleShape2D_jbpsy")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="platform" unique_id=162114194]
-position = Vector2(1062, 120)
+position = Vector2(1062, 124)
 shape = SubResource("RectangleShape2D_6n6w2")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="platform" unique_id=2140167383]
@@ -271,15 +277,11 @@ position = Vector2(1249, 124)
 shape = SubResource("RectangleShape2D_dt8cn")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="platform" unique_id=347377657]
-position = Vector2(1339, 92)
+position = Vector2(1331, 92)
 shape = SubResource("RectangleShape2D_firab")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="platform" unique_id=2087057674]
 position = Vector2(1384, 110)
-shape = SubResource("RectangleShape2D_8bjin")
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="platform" unique_id=557195592]
-position = Vector2(1437, 89)
 shape = SubResource("RectangleShape2D_8bjin")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="platform" unique_id=386696927]
@@ -346,7 +348,7 @@ rotation = -3.1415925
 texture = ExtResource("16_u6xpa")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Platform2" unique_id=355788206]
-position = Vector2(1435, 75)
+position = Vector2(1427.0001, 75.00001)
 scale = Vector2(0.6875, 0.6875)
 texture = ExtResource("19_dt8cn")
 
@@ -356,6 +358,7 @@ scale = Vector2(0.6875, 0.6875)
 texture = ExtResource("19_dt8cn")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Platform2" unique_id=1977508935]
-position = Vector2(1533, 72.00001)
+position = Vector2(1531.0001, 85.99995)
+rotation = 0.7853982
 scale = Vector2(0.6875, 0.6875)
 texture = ExtResource("19_dt8cn")

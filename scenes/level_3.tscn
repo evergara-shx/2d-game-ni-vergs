@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bmp5t8koicuu2" path="res://scenes/level_intro.tscn" id="5_ah8om"]
 [ext_resource type="PackedScene" uid="uid://b36alrfh22yga" path="res://scenes/ObjectiveUI.tscn" id="6_p6vls"]
 [ext_resource type="PackedScene" uid="uid://uujn5pbr668x" path="res://scenes/invi_portal.tscn" id="7_wae8j"]
+[ext_resource type="PackedScene" uid="uid://b06yvchk0em2t" path="res://scenes/faster_crow.tscn" id="9_ha73p"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr57u"]
 
@@ -175,12 +176,18 @@ limit_bottom = 400
 [node name="PointLight2D" type="PointLight2D" parent="Game/Player" unique_id=1833517488]
 position = Vector2(-10, -14)
 color = Color(0.51078886, 0.44979733, 0.40296698, 1)
-energy = 1.12
+energy = 1.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_h23n6")
 texture_scale = 3.0
 
 [node name="UI" type="Node2D" parent="." unique_id=775663578]
+
+[node name="faster_crow" parent="." unique_id=542709873 instance=ExtResource("9_ha73p")]
+position = Vector2(1128, 233)
+
+[node name="faster_crow2" parent="." unique_id=830344935 instance=ExtResource("9_ha73p")]
+position = Vector2(618, 250)
 
 [connection signal="body_entered" from="Platforms/StaticBody2D/invi_portal" to="." method="_on_invi_portal_body_entered"]
 [connection signal="body_entered" from="Platforms/StaticBody2D/invi_portal" to="Platforms/StaticBody2D/invi_portal" method="_on_body_entered"]
