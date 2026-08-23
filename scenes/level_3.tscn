@@ -60,12 +60,12 @@ fill_to = Vector2(1, 0.5)
 [node name="Level 3" type="Node2D" unique_id=145235216]
 script = ExtResource("1_hhfj6")
 
-[node name="ObjectiveUI" parent="." unique_id=1602419165 instance=ExtResource("6_p6vls")]
-obj = "Navigate your way out the mines."
-
 [node name="LevelIntro" parent="." unique_id=474043635 instance=ExtResource("5_ah8om")]
 level_title = "The Depths"
 design_name = "CenterContainer3"
+
+[node name="ObjectiveUI" parent="." unique_id=1602419165 instance=ExtResource("6_p6vls")]
+obj = "Navigate your way out the mines."
 
 [node name="Background" type="Node2D" parent="." unique_id=2004210340]
 
@@ -165,6 +165,12 @@ next_level = "uid://ggnlf1t13i31"
 
 [node name="Game" type="Node2D" parent="." unique_id=1765709483]
 
+[node name="faster_crow" parent="Game" unique_id=542709873 instance=ExtResource("9_ha73p")]
+position = Vector2(1128, 233)
+
+[node name="faster_crow2" parent="Game" unique_id=830344935 instance=ExtResource("9_ha73p")]
+position = Vector2(618, 250)
+
 [node name="Player" parent="Game" unique_id=1484756979 instance=ExtResource("2_h23n6")]
 position = Vector2(53, 217)
 
@@ -182,12 +188,6 @@ texture = SubResource("GradientTexture2D_h23n6")
 texture_scale = 3.0
 
 [node name="UI" type="Node2D" parent="." unique_id=775663578]
-
-[node name="faster_crow" parent="." unique_id=542709873 instance=ExtResource("9_ha73p")]
-position = Vector2(1128, 233)
-
-[node name="faster_crow2" parent="." unique_id=830344935 instance=ExtResource("9_ha73p")]
-position = Vector2(618, 250)
 
 [connection signal="body_entered" from="Platforms/StaticBody2D/invi_portal" to="." method="_on_invi_portal_body_entered"]
 [connection signal="body_entered" from="Platforms/StaticBody2D/invi_portal" to="Platforms/StaticBody2D/invi_portal" method="_on_body_entered"]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bpfb4yrpgp8cy"]
+
+[ext_resource type="Texture2D" uid="uid://8mu2nptsrrav" path="res://assets/environment/craftpix-net-924041-power-station-free-tileset-pixel-art/1 Tiles/Tileset.png.png" id="1_7kqte"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr57u"]
+size = Vector2(30, 158)
+
+[node name="moving_pillar" type="AnimatableBody2D" unique_id=1711878189]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1561555910]
+position = Vector2(0, 47)
+shape = SubResource("RectangleShape2D_dr57u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1769721908]
+texture = ExtResource("1_7kqte")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 65)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=672524275]
+position = Vector2(0, 95)
+texture = ExtResource("1_7kqte")
+region_enabled = true
+region_rect = Rect2(96, 32, 32, 64)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1570474964]
+position = Vector2(0, 48)
+texture = ExtResource("1_7kqte")
+region_enabled = true
+region_rect = Rect2(96, 33, 32, 32)
