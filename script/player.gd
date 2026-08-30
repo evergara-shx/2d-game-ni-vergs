@@ -1,16 +1,17 @@
 extends CharacterBody2D
 
 const SPEED = 140.0
-const JUMP_VELOCITY = -300.0
-const DOUBLE_JUMP_VELOCITY = -200.0
+const JUMP_VELOCITY = -410.0
 const COYOTE_TIME = 0.15
-const MAX_JUMPS = 2
+
+# Variable jump settings
+const JUMP_CUT_MULTIPLIER = 0.45
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var dead = false
 var coyote_timer = 0.0
-var jumps_left = MAX_JUMPS
+var is_jumping = false
 
 
 func _physics_process(delta: float) -> void:
@@ -20,7 +21,6 @@ func _physics_process(delta: float) -> void:
 	# Coyote time
 	if is_on_floor():
 		coyote_timer = COYOTE_TIME
-		jumps_left = MAX_JUMPS
 	else:
 		coyote_timer -= delta
 
@@ -30,16 +30,22 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump
 	if Input.is_action_just_pressed("jump"):
-		# First jump / coyote jump
 		if coyote_timer > 0:
 			velocity.y = JUMP_VELOCITY
-			coyote_timer = 0
-			jumps_left -= 1
+			coyote_timer = 0.0
+			is_jumping = true
 
-		# Second jump
-		elif jumps_left > 0:
-			velocity.y = DOUBLE_JUMP_VELOCITY
-			jumps_left -= 1
+	# Variable jump height
+	# Releasing the button early cuts the upward movement
+	if Input.is_action_just_released("jump"):
+		if velocity.y < 0:
+			velocity.y *= JUMP_CUT_MULTIPLIER
+
+		is_jumping = false
+
+	# Stop jump state once we're falling
+	if velocity.y >= 0:
+		is_jumping = false
 
 	# Get input direction
 	var direction := Input.get_axis("move_left", "move_right")
@@ -59,7 +65,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite.play("jump")
 
-	# Apply movement
+	# Apply horizontal movement
 	if direction:
 		velocity.x = direction * SPEED
 	else:
