@@ -594,7 +594,7 @@ scale = Vector2(0.367531, 0.367531)
 texture = ExtResource("4_q41qf")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="background" unique_id=304250568]
-color = Color(0.5053437, 0.5053442, 0.50534385, 1)
+color = Color(0.31431597, 0.31431615, 0.3143161, 1)
 
 [node name="platform" type="Node2D" parent="." unique_id=374335389]
 
@@ -733,6 +733,6 @@ zoom = Vector2(3.5, 3.5)
 limit_bottom = 400
 
 [node name="PointLight2D" type="PointLight2D" parent="Game/Player" unique_id=121057765]
-color = Color(0.5880875, 0.58008707, 0.5680886, 1)
+color = Color(0.7304745, 0.7238703, 0.71396613, 1)
 texture = SubResource("GradientTexture2D_ha73p")
 texture_scale = 3.0
