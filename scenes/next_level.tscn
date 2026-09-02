@@ -215,6 +215,11 @@ position = Vector2(1158, 77)
 scale = Vector2(0.5625, 0.5625)
 texture = ExtResource("10_6n6w2")
 
+[node name="Portal" parent="." unique_id=361948994 instance=ExtResource("6_bau2p")]
+position = Vector2(1814.0001, 91)
+rotation = 1.5707964
+next_level = "uid://dew8sadgh1i4f"
+
 [node name="Player" parent="." unique_id=1484756979 instance=ExtResource("2_nlao2")]
 position = Vector2(-334, 25)
 
@@ -326,11 +331,6 @@ position = Vector2(323, 135)
 [node name="Gas" parent="." unique_id=2005369269 instance=ExtResource("5_twfgh")]
 position = Vector2(776, 103)
 scale = Vector2(2.0399904, 2.0399904)
-
-[node name="Portal" parent="." unique_id=361948994 instance=ExtResource("6_bau2p")]
-position = Vector2(1814.0001, 91)
-rotation = 1.5707964
-next_level = "uid://dew8sadgh1i4f"
 
 [node name="LevelIntro" parent="." unique_id=474043635 instance=ExtResource("7_nlao2")]
 level_title = "sewerage"

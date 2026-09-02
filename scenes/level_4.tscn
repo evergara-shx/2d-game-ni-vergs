@@ -526,7 +526,7 @@ _data = {
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr57u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oiyts"]
-size = Vector2(269, 16)
+size = Vector2(261, 16)
 
 [sub_resource type="Gradient" id="Gradient_ax3dk"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -807,14 +807,21 @@ shape = SubResource("WorldBoundaryShape2D_dr57u")
 position = Vector2(1176, 476)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform/Killzone2" unique_id=348582121]
-position = Vector2(-1104.5, -200)
+position = Vector2(-1108.5, -200)
 shape = SubResource("RectangleShape2D_oiyts")
+
+[node name="Pixelgate" type="Sprite2D" parent="." unique_id=170820701]
+position = Vector2(-510, 96)
+scale = Vector2(0.3557105, 0.42557254)
+texture = ExtResource("34_xcitd")
+region_enabled = true
+region_rect = Rect2(404, 129, 138, 131)
 
 [node name="Game" type="Node2D" parent="." unique_id=609496621]
 position = Vector2(0, -59)
 
 [node name="Player" parent="Game" unique_id=1484756979 instance=ExtResource("5_ycko3")]
-position = Vector2(-74, 104)
+position = Vector2(-131, 86)
 
 [node name="Camera2D" type="Camera2D" parent="Game/Player" unique_id=1898639491]
 position = Vector2(-3, -14)
@@ -926,13 +933,6 @@ position = Vector2(765, 284)
 visible = false
 position = Vector2(-541, 125)
 next_level = "uid://cx10wyhacknua"
-
-[node name="Pixelgate" type="Sprite2D" parent="." unique_id=170820701]
-position = Vector2(-510, 96)
-scale = Vector2(0.3557105, 0.42557254)
-texture = ExtResource("34_xcitd")
-region_enabled = true
-region_rect = Rect2(404, 129, 138, 131)
 
 [node name="transition" type="CanvasLayer" parent="." unique_id=531719659]
 script = ExtResource("35_xcitd")
