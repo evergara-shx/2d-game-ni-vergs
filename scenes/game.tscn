@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://clv11qnq6srtw" path="res://assets/environment/craftpix-net-846754-free-green-zone-tileset-pixel-art/3 Objects/Bushes/19.png" id="28_8qswn"]
 [ext_resource type="PackedScene" uid="uid://bmp5t8koicuu2" path="res://scenes/level_intro.tscn" id="28_sww3w"]
 [ext_resource type="PackedScene" uid="uid://b36alrfh22yga" path="res://scenes/ObjectiveUI.tscn" id="29_suyxu"]
+[ext_resource type="Script" uid="uid://dbssplkkhuuwy" path="res://script/transition.gd" id="31_qouja"]
+[ext_resource type="PackedScene" uid="uid://batgtr74l6glr" path="res://scenes/note.tscn" id="32_wljb1"]
 [ext_resource type="Texture2D" uid="uid://dlkq3cq2rqgp" path="res://assets/environment/craftpix-net-846754-free-green-zone-tileset-pixel-art/3 Objects/Benches/2.png" id="38_3hbvx"]
 [ext_resource type="Texture2D" uid="uid://demt8201cob4b" path="res://assets/environment/craftpix-net-846754-free-green-zone-tileset-pixel-art/4 Animated objects/Fountain.png" id="39_q8j3a"]
 [ext_resource type="PackedScene" uid="uid://cprh0e3o5ohio" path="res://scenes/sign.tscn" id="40_m4url"]
@@ -743,7 +745,7 @@ autoplay = &"RESET"
 
 [node name="Player" parent="." unique_id=1484756979 instance=ExtResource("1_uwrxv")]
 z_index = 5
-position = Vector2(-583, 32)
+position = Vector2(-617, 4)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=93395265]
 position = Vector2(-3, -16)
@@ -815,3 +817,20 @@ level_description = "
 "
 
 [node name="ObjectiveUI" parent="." unique_id=1602419165 instance=ExtResource("29_suyxu")]
+
+[node name="transition" type="CanvasLayer" parent="." unique_id=1231226295]
+script = ExtResource("31_qouja")
+
+[node name="Fade" type="ColorRect" parent="transition" unique_id=1690955332]
+modulate = Color(1, 1, 1, 0.003921569)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Note" parent="." unique_id=1784515937 instance=ExtResource("32_wljb1")]
+position = Vector2(-511, 16)
+note_text = "Greenzone
+Once a thriving industrial city, Veyra was built and operated by NULLCORP. But after a mysterious event brought civilization to an end, humanity disappeared, leaving the city abandoned. Years later, nature has begun to reclaim what was left behind. Veyra is no longer a city. It is a ruin being reclaimed by the wild."

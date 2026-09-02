@@ -8,7 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bmp5t8koicuu2" path="res://scenes/level_intro.tscn" id="5_ah8om"]
 [ext_resource type="PackedScene" uid="uid://b36alrfh22yga" path="res://scenes/ObjectiveUI.tscn" id="6_p6vls"]
 [ext_resource type="PackedScene" uid="uid://uujn5pbr668x" path="res://scenes/invi_portal.tscn" id="7_wae8j"]
+[ext_resource type="PackedScene" uid="uid://batgtr74l6glr" path="res://scenes/note.tscn" id="8_56dhn"]
+[ext_resource type="Texture2D" uid="uid://b636ti7uvwgf8" path="res://assets/environment/paperpile.png" id="9_ax3dk"]
 [ext_resource type="PackedScene" uid="uid://b06yvchk0em2t" path="res://scenes/faster_crow.tscn" id="9_ha73p"]
+[ext_resource type="Texture2D" uid="uid://b72m72qfor4du" path="res://assets/environment/notepaper.png" id="11_ax3dk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr57u"]
 
@@ -158,10 +161,35 @@ position = Vector2(1911.481, 185.5625)
 shape = SubResource("RectangleShape2D_ax3dk")
 
 [node name="invi_portal" parent="Platforms/StaticBody2D" unique_id=689543858 instance=ExtResource("7_wae8j")]
-position = Vector2(1855, 199)
+position = Vector2(1855, 198)
 collision_layer = 3
 collision_mask = 3
 next_level = "uid://ggnlf1t13i31"
+
+[node name="Note" parent="Platforms/StaticBody2D" unique_id=1784515937 instance=ExtResource("8_56dhn")]
+visible = false
+position = Vector2(330, 257)
+note_text = "They told us we're mining for energy. That's not what we're doing.
+I've seen what they're pulling out of the lower shafts. It isn't coal. It isn't ore. I know what rock looks like.
+Whatever this is, they don't want us to know. Yesterday, they sealed Shaft 9. They said it was a safety precaution. I heard something moving down there before they closed it."
+
+[node name="Note2" parent="Platforms/StaticBody2D" unique_id=1507481461 instance=ExtResource("8_56dhn")]
+visible = false
+position = Vector2(1451, 222)
+note_text = "**NULLCORP — RESTRICTED**
+Excavation has reached the target depth. The formation is significantly larger than originally predicted. Preliminary analysis suggests that the material is not naturally occurring. Research Division has requested additional personnel and equipment. Mining operations are to continue until further notice.
+"
+
+[node name="Note3" parent="Platforms/StaticBody2D" unique_id=2057284359 instance=ExtResource("8_56dhn")]
+visible = false
+position = Vector2(1801, 231)
+note_text = "We finally reached the bottom. There is no mine down here. There is a structure. It was already here. The walls aren't made of stone. They're too smooth. Too perfect. NULLCORP knew about this. They knew before they built Veyra. I've heard the sound again. It's coming from inside.
+"
+
+[node name="Paperpile" type="Sprite2D" parent="Platforms/StaticBody2D" unique_id=1437286666]
+position = Vector2(1446.0001, 224)
+scale = Vector2(0.047083367, 0.021282908)
+texture = ExtResource("9_ax3dk")
 
 [node name="Game" type="Node2D" parent="." unique_id=1765709483]
 
@@ -172,12 +200,13 @@ position = Vector2(1128, 233)
 position = Vector2(618, 250)
 
 [node name="Player" parent="Game" unique_id=1484756979 instance=ExtResource("2_h23n6")]
-position = Vector2(53, 217)
+position = Vector2(26, 216)
 
 [node name="Camera2D" type="Camera2D" parent="Game/Player" unique_id=894500625]
 position = Vector2(2, -14)
 zoom = Vector2(3, 3)
 limit_bottom = 400
+position_smoothing_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="Game/Player" unique_id=1833517488]
 position = Vector2(-10, -14)
@@ -188,6 +217,16 @@ texture = SubResource("GradientTexture2D_h23n6")
 texture_scale = 3.0
 
 [node name="UI" type="Node2D" parent="." unique_id=775663578]
+
+[node name="Notepaper" type="Sprite2D" parent="." unique_id=1215318259]
+position = Vector2(331, 244.00002)
+scale = Vector2(0.04101561, 0.019620078)
+texture = ExtResource("11_ax3dk")
+
+[node name="Notepaper2" type="Sprite2D" parent="." unique_id=134011993]
+position = Vector2(1809, 222.00002)
+scale = Vector2(0.04101561, 0.019620078)
+texture = ExtResource("11_ax3dk")
 
 [connection signal="body_entered" from="Platforms/StaticBody2D/invi_portal" to="." method="_on_invi_portal_body_entered"]
 [connection signal="body_entered" from="Platforms/StaticBody2D/invi_portal" to="Platforms/StaticBody2D/invi_portal" method="_on_body_entered"]

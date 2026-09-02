@@ -4,7 +4,8 @@
 [ext_resource type="FontFile" uid="uid://b7dvgd37cq5p8" path="res://assets/fonts/VT323-Regular.ttf" id="2_7dprr"]
 [ext_resource type="Texture2D" uid="uid://c4qfsocqwh24r" path="res://assets/environment/shit.-removebg-preview.png" id="2_st5du"]
 [ext_resource type="Texture2D" uid="uid://dafad3jsbuo7w" path="res://assets/environment/2-removebg-preview.png" id="4_st5du"]
-[ext_resource type="Texture2D" uid="uid://dajixno8ge0nj" path="res://assets/environment/shit.__1_-removebg-preview.png" id="5_ltek1"]
+[ext_resource type="Texture2D" uid="uid://pasx8a3xs3ea" path="res://assets/environment/lvl3intro.png" id="5_5u1bk"]
+[ext_resource type="Texture2D" uid="uid://cky7pev4y8prg" path="res://assets/environment/shit.__1_-remove.bg-preview.png" id="6_5u1bk"]
 
 [node name="LevelIntro" type="CanvasLayer" unique_id=474043635]
 script = ExtResource("1_6f35c")
@@ -91,10 +92,10 @@ horizontal_alignment = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = 150.0
-offset_right = -2.0
-offset_bottom = 150.0
+offset_left = -91.0
+offset_top = 93.0
+offset_right = 70.77783
+offset_bottom = 184.0
 grow_horizontal = 2
 grow_vertical = 2
 offset_transform_enabled = true
@@ -104,7 +105,8 @@ offset_transform_scale = Vector2(0.725, 0.725)
 [node name="Panel" type="TextureRect" parent="CenterContainer3" unique_id=2050421321]
 custom_minimum_size = Vector2(400, 170)
 layout_mode = 2
-texture = ExtResource("5_ltek1")
+offset_transform_enabled = true
+texture = ExtResource("5_5u1bk")
 
 [node name="LevelName" type="Label" parent="CenterContainer3/Panel" unique_id=1028124487]
 layout_mode = 0
@@ -122,6 +124,45 @@ offset_left = -44.0
 offset_top = 121.0
 offset_right = 456.0
 offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("2_7dprr")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="CenterContainer4" type="CenterContainer" parent="." unique_id=290800626]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 150.0
+offset_right = -2.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -190)
+offset_transform_scale = Vector2(0.725, 0.725)
+
+[node name="Panel" type="TextureRect" parent="CenterContainer4" unique_id=79984667]
+custom_minimum_size = Vector2(400, 170)
+layout_mode = 2
+texture = ExtResource("6_5u1bk")
+
+[node name="LevelName" type="Label" parent="CenterContainer4/Panel" unique_id=1565347920]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 212.0
+offset_right = 562.0
+offset_bottom = 262.0
+theme_override_fonts/font = ExtResource("2_7dprr")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="CenterContainer4/Panel" unique_id=202922326]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 233.0
+offset_right = 542.0
+offset_bottom = 283.0
 theme_override_fonts/font = ExtResource("2_7dprr")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1

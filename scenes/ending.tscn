@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cx10wyhacknua"]
+
+[ext_resource type="Script" uid="uid://bscnxb2x4omks" path="res://script/ending.gd" id="1_mqjok"]
+[ext_resource type="FontFile" uid="uid://b7dvgd37cq5p8" path="res://assets/fonts/VT323-Regular.ttf" id="2_fyrdv"]
+
+[node name="Ending" type="Node2D" unique_id=660898181]
+script = ExtResource("1_mqjok")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1463280455]
+offset_right = 1151.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 1)
+
+[node name="ControlRoom" type="Sprite2D" parent="." unique_id=1597944660]
+
+[node name="City" type="Sprite2D" parent="." unique_id=2085529458]
+
+[node name="Text" type="Label" parent="." unique_id=1149266323]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 577.0
+offset_bottom = 347.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fyrdv")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=389684070]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=536015695]
+
+[node name="Fade" type="ColorRect" parent="CanvasLayer" unique_id=1252494751]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

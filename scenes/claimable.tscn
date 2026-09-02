@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://1cpwl3ck5p8p" path="res://script/claimable.gd" id="1_vl6ib"]
 [ext_resource type="Texture2D" uid="uid://dxics5vu3c0jn" path="res://assets/environment/craftpix-net-846754-free-green-zone-tileset-pixel-art/3 Objects/Fence/1.png" id="2_nvnem"]
 [ext_resource type="Texture2D" uid="uid://c23jxa3a84ruf" path="res://assets/environment/craftpix-net-846754-free-green-zone-tileset-pixel-art/3 Objects/Fence/2.png" id="3_j3jes"]
+[ext_resource type="FontFile" uid="uid://b7dvgd37cq5p8" path="res://assets/fonts/VT323-Regular.ttf" id="4_j3jes"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0m42x"]
 size = Vector2(30, 62)
@@ -26,6 +27,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr57u"]
+size = Vector2(51, 42)
+
 [node name="Claimable" type="Node2D" unique_id=1218090172]
 script = ExtResource("1_vl6ib")
 
@@ -37,3 +41,24 @@ shape = SubResource("RectangleShape2D_0m42x")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=83508624]
 sprite_frames = SubResource("SpriteFrames_dr57u")
 animation = &"open"
+
+[node name="Label" type="Label" parent="." unique_id=237885866]
+visible = false
+offset_left = -82.0
+offset_top = -29.0
+offset_right = -11.0
+offset_bottom = -6.0
+theme_override_fonts/font = ExtResource("4_j3jes")
+text = "cards 0/3"
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=659081698]
+position = Vector2(-16, -2)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=772353827]
+position = Vector2(15.5, 11)
+shape = SubResource("RectangleShape2D_dr57u")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

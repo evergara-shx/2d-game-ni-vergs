@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://c7esrrolhrtxr"]
 
 [ext_resource type="Script" uid="uid://hf2bdh2yjmmv" path="res://script/main_menu.gd" id="1_l6cm7"]
-[ext_resource type="Texture2D" uid="uid://c2a4udkepp0fj" path="res://assets/environment/X - The Everything App.jpg" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://d21cvkng1xyq0" path="res://assets/environment/ChatGPT Image Sep 3, 2026, 12_12_15 AM.png" id="2_8ln24"]
+[ext_resource type="FontFile" uid="uid://dqtqak4xp5c8h" path="res://assets/fonts/BebasNeue-Regular.ttf" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://c3scp1xqgjtga" path="res://assets/environment/adbc7496-15af-474f-a772-4fd1ece50769_removalai_preview.png" id="3_wu84c"]
+[ext_resource type="PackedScene" uid="uid://d27mew3ys1ssl" path="res://scenes/player.tscn" id="4_wu84c"]
+[ext_resource type="Script" uid="uid://dbssplkkhuuwy" path="res://script/transition.gd" id="6_rtw2f"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr57u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr57u"]
+size = Vector2(19, 617)
 
 [node name="MainMenu" type="Control" unique_id=1937201835]
 layout_mode = 3
@@ -12,62 +21,79 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l6cm7")
 
-[node name="Background" type="TextureRect" parent="." unique_id=99931685]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1086791667]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ekxnf")
+texture = ExtResource("2_8ln24")
 expand_mode = 1
-stretch_mode = 6
 
-[node name="DarkOverlay" type="ColorRect" parent="." unique_id=2143381171]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.3137255)
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2094907112]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 232.0
+offset_right = 1054.0
+offset_bottom = 333.0
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1319000533]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=579103140]
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=2063273153]
 layout_mode = 2
-theme_override_constants/separation = 15
-
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=886281920]
-layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "LMAO 2D GAME NI VERGS"
-horizontal_alignment = 1
-
-[node name="Play" type="Button" parent="CenterContainer/VBoxContainer" unique_id=822432591]
-custom_minimum_size = Vector2(250, 60)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
 text = "PLAY"
 
-[node name="Options" type="Button" parent="CenterContainer/VBoxContainer" unique_id=314330118]
-custom_minimum_size = Vector2(250, 60)
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1309955563]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "OPTIONS"
+text = "Quit
+"
 
-[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1169640340]
-custom_minimum_size = Vector2(250, 60)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "QUIT"
+[node name="Label" type="Label" parent="." unique_id=616483044]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 29.0
+offset_right = 1053.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(0.5058824, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 170
+text = "AFTERLIGHT"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=692392471]
+position = Vector2(580, 141)
+rotation = 1.1047934
+scale = Vector2(0.232, 0.232)
+texture = ExtResource("3_wu84c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=841759163]
+position = Vector2(90, 615)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=525168061]
+shape = SubResource("WorldBoundaryShape2D_dr57u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1723967870]
+position = Vector2(1051, -303)
+shape = SubResource("RectangleShape2D_dr57u")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=459271629]
+position = Vector2(-80, -278)
+shape = SubResource("RectangleShape2D_dr57u")
+
+[node name="Player" parent="." unique_id=1484756979 instance=ExtResource("4_wu84c")]
+position = Vector2(430, 577)
+scale = Vector2(4.2800007, 4.2800007)
+
+[node name="transition" type="CanvasLayer" parent="." unique_id=990377755]
+script = ExtResource("6_rtw2f")
+
+[node name="Fade" type="ColorRect" parent="transition" unique_id=457366891]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

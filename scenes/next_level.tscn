@@ -20,6 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://cnvya82i6ot2w" path="res://assets/environment/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/3 Objects/Icons/11.png" id="10_6n6w2"]
 [ext_resource type="Texture2D" uid="uid://c7is0tfppdcs0" path="res://assets/environment/craftpix-net-924041-power-station-free-tileset-pixel-art/3 Objects/1 Tube/9.png" id="16_u6xpa"]
 [ext_resource type="Texture2D" uid="uid://dcsmcunmn7y1w" path="res://assets/environment/craftpix-net-314143-free-industrial-zone-tileset-pixel-art/3 Objects/Bench.png" id="19_dt8cn"]
+[ext_resource type="Script" uid="uid://dbssplkkhuuwy" path="res://script/transition.gd" id="21_ur0nc"]
+[ext_resource type="PackedScene" uid="uid://batgtr74l6glr" path="res://scenes/note.tscn" id="22_bv3hk"]
+[ext_resource type="Texture2D" uid="uid://b636ti7uvwgf8" path="res://assets/environment/paperpile.png" id="23_firab"]
 
 [sub_resource type="Gradient" id="Gradient_jymac"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -362,3 +365,64 @@ position = Vector2(1531.0001, 85.99995)
 rotation = 0.7853982
 scale = Vector2(0.6875, 0.6875)
 texture = ExtResource("19_dt8cn")
+
+[node name="transition" type="CanvasLayer" parent="." unique_id=646507548]
+script = ExtResource("21_ur0nc")
+
+[node name="Fade" type="ColorRect" parent="transition" unique_id=2118188717]
+modulate = Color(1, 1, 1, 0.003921569)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Note" parent="." unique_id=1784515937 instance=ExtResource("22_bv3hk")]
+visible = false
+position = Vector2(-162, 115)
+note_text = "NULLCORP — MUNICIPAL MAINTENANCE LOG
+Sector: Veyra Central Sewerage
+Date: 14/06
+Routine inspection completed.
+Several drainage lines are showing unusual blockages. Maintenance has been requested for Sections C-12 through C-18. Water quality remains within acceptable limits.
+-Municipal Infrastructure"
+
+[node name="Note2" parent="." unique_id=1577042735 instance=ExtResource("22_bv3hk")]
+visible = false
+position = Vector2(516, 116)
+note_text = "**INTERNAL MEMO — NULLCORP**
+Do not report the discoloration in the lower channels to municipal authorities.
+The material is being transferred to the processing facility for analysis.
+Employees assigned to Sublevel 3 are not authorized to enter Sublevel 4.
+Any questions regarding Sublevel 4 should be directed to Administration.
+"
+
+[node name="Note3" parent="." unique_id=950922125 instance=ExtResource("22_bv3hk")]
+position = Vector2(1713, 116)
+note_text = "**NULLCORP EMERGENCY NOTICE**
+All sewerage personnel are to evacuate immediately. Do not open or operate any valves connected to Sublevel 4.
+The emergency response team has been notified.
+This facility is to remain sealed until further notice.
+**UNDER NO CIRCUMSTANCES SHOULD THE MAIN SYSTEM BE REACTIVATED.**
+"
+
+[node name="Note4" parent="." unique_id=1106648378 instance=ExtResource("22_bv3hk")]
+visible = false
+position = Vector2(975, 123)
+note_text = "I don't know why they keep telling us the smell is harmless.
+It wasn't like this last month.
+The water down here has started moving on its own. Sometimes I hear something hitting the pipes from the other side.
+I asked my supervisor about it.
+He told me to stop asking questions.
+I'm not going back down there."
+
+[node name="Paperpile" type="Sprite2D" parent="." unique_id=839175941]
+position = Vector2(-162, 126)
+scale = Vector2(0.057083346, 0.03041666)
+texture = ExtResource("23_firab")
+
+[node name="Paperpile2" type="Sprite2D" parent="." unique_id=1691471947]
+position = Vector2(516, 127.000015)
+scale = Vector2(0.057083346, 0.02687498)
+texture = ExtResource("23_firab")

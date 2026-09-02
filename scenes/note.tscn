@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://batgtr74l6glr"]
+
+[ext_resource type="Script" uid="uid://lxef6sovc0r5" path="res://script/note.gd" id="1_njo4t"]
+[ext_resource type="Texture2D" uid="uid://b2nywni7uc6oe" path="res://assets/environment/craftpix-net-314143-free-industrial-zone-tileset-pixel-art/3 Objects/Board1.png" id="2_8ibmt"]
+[ext_resource type="Texture2D" uid="uid://dus1hnanmcuh5" path="res://assets/environment/note.png" id="3_ixjtm"]
+[ext_resource type="FontFile" uid="uid://b7dvgd37cq5p8" path="res://assets/fonts/VT323-Regular.ttf" id="4_s1bem"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7x03"]
+size = Vector2(30, 20)
+
+[node name="Note" type="Area2D" unique_id=1784515937]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_njo4t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=421982187]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_i7x03")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=895866858]
+texture = ExtResource("2_8ibmt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1827746819]
+
+[node name="NoteDisplay" type="Control" parent="CanvasLayer" unique_id=1422751660]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NotePaper" type="Sprite2D" parent="CanvasLayer/NoteDisplay" unique_id=662427601]
+position = Vector2(576, 324)
+rotation = 1.5707964
+texture = ExtResource("3_ixjtm")
+
+[node name="NoteText" type="Label" parent="CanvasLayer/NoteDisplay" unique_id=1368574495]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 185.0
+offset_right = 772.0
+offset_bottom = 455.0
+theme_override_fonts/font = ExtResource("4_s1bem")
+theme_override_font_sizes/font_size = 24
+autowrap_mode = 3
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
